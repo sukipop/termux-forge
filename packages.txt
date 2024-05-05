@@ -1,0 +1,14 @@
+curl
+figlet
+git
+glow
+gum
+imagemagick
+jq
+neofetch
+nmap
+termux-api
+tree
+vim
+wget
+zsh
