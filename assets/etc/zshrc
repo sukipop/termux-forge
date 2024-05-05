@@ -1,0 +1,10 @@
+command_not_found_handler() {
+    "$PREFIX/libexec/termux/command-not-found" "$1"
+}
+
+emulate sh -c ". $PREFIX/etc/profile"
+
+export STORAGE="/storage/emulated/0"
+export ZDOTDIR="$HOME/.config/zsh"
+
+readonly STORAGE ZDOTDIR
