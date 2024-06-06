@@ -1,5 +1,6 @@
 7zip
 bitcoin
+catimg
 colordiff
 crawl
 curl
@@ -7,6 +8,7 @@ electrum
 fdupes
 ffmpeg
 figlet
+fzf
 gh
 git
 git-lfs
@@ -15,13 +17,16 @@ gum
 html2text
 imagemagick
 jq
+libqrencode
 man
+mosquitto
 mpv
 neofetch
 nethack
 nmap
 nodejs
 openssl-tool
+ossp-uuid
 pwgen
 python
 python-pip
