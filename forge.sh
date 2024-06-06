@@ -26,8 +26,7 @@ if [[ ! -f "packages.txt" ]]; then
 fi
 
 # Install packages listed in packages.txt
-pkg update -y
-pkg upgrade -y
+yes Y | pkg update -y
 while read -r pkg; do
     if [[ "$pkg" == '#'* ]]; then
         continue
@@ -38,10 +37,10 @@ while read -r pkg; do
 done < "packages.txt"
 
 # Set up zsh
-cp "assets/etc/zshrc" "$PREFIX/etc/zshrc"
-mkdir -p "$HOME/.config"
-if ! git clone git@github.com:sukipop/zsh-config.git "$HOME/.config/zsh"; then
-    if ! git clone https://github.com/sukipop/zsh-config "$HOME/.config/zsh"; then
+cp "assets/etc/zshrc" "${PREFIX}/etc/zshrc"
+mkdir -p "${HOME}/.config"
+if ! git clone git@github.com:sukipop/zsh-config.git "${HOME}/.config/zsh"; then
+    if ! git clone https://github.com/sukipop/zsh-config "${HOME}/.config/zsh"; then
          error "Failed to clone zsh-config"
     fi
 fi
